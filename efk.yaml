@@ -31,6 +31,8 @@ spec:
           value: single-node
         - name: xpack.security.enabled
           value: "false" # Disables HTTPS/auth for local dev
+        - name: ES_JAVA_OPTS
+          value: "-Xms1g -Xmx1g" # Forces Elasticsearch to use exactly 1GB of heap
         ports:
         - containerPort: 9200
 ---
